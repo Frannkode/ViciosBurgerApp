@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menú - Vicio's Burger</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.0/font/bootstrap-icons.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .font-chunky {
+        font-family: "Lilita One", sans-serif;
+      }
+      .contador-badge {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        background-color: red;
+        color: white;
+        font-size: 0.8rem;
+        font-weight: bold;
+        border-radius: 9999px;
+        padding: 2px 6px;
+      }
+    </style>
+  </head>
+  <body class="text-white font-chunky bg-[url('imgs/patron2.png')] bg-cover bg-center">
+    
+
+    
+    <header class="text-center py-4 text-3xl bg-[#fc3034]">Menú</header>
+
+    <div class="p-4 space-y-8 pb-20">
+
+      <!-- Hamburguesas -->
+      <h2 class="text-2xl text-[#fc3034]">🍔 Hamburguesas</h2>
+      <div class="flex gap-4 overflow-x-auto snap-x">
+        
+        <!-- Vicio's Especial -->
+        <div class="min-w-[70%] snap-start bg-gray-800 rounded-lg p-4 relative">
+          <div class="relative">
+            <img src="imgs/ViciosEspecial.jpeg" class="w-full rounded-lg mb-2" />
+            <span id="contador-Vicio'S Especial" class="contador-badge hidden">0</span>
+          </div>
+          <h3>Vicio’s Especial</h3>
+          <p class="text-sm text-gray-400">
+            Doble carne, doble cheddar, lechuga, tomate, mayonesa, huevo, panceta.
+          </p>
+          <p>$6200</p>
+          <div class="flex gap-2 mt-2">
+            <button onclick="agregarAlCarrito('Vicio\'S Especial', 6200)" class="bg-green-500 px-4 py-1 rounded">Agregar</button>
+            <button onclick="quitarDelCarrito('Vicio\'S Especial')" class="bg-red-500 px-4 py-1 rounded">Quitar</button>
+          </div>
+        </div>
+
+        <!-- Super Vicio's -->
+        <div class="min-w-[70%] snap-start bg-gray-800 rounded-lg p-4 relative">
+          <div class="relative">
+            <img src="imgs/SuperVicios.jpeg" class="w-full rounded-lg mb-2" />
+            <span id="contador-Super Vicio'S" class="contador-badge hidden">0</span>
+          </div>
+          <h3>Super Vicio’s</h3>
+          <p class="text-sm text-gray-400">
+            Triple carne, triple cheddar, lechuga, tomate, huevo, panceta, mayonesa
+          </p>
+          <p>$7500</p>
+          <div class="flex gap-2 mt-2">
+            <button onclick="agregarAlCarrito('Super Vicio\'S', 7500)" class="bg-green-500 px-4 py-1 rounded">Agregar</button>
+            <button onclick="quitarDelCarrito('Super Vicio\'S')" class="bg-red-500 px-4 py-1 rounded">Quitar</button>
+          </div>
+        </div>
+
+        <!-- Mega Vicio -->
+        <div class="min-w-[70%] snap-start bg-gray-800 rounded-lg p-4 relative">
+          <div class="relative">
+            <img src="imgs/MegaVicios.jpeg" class="w-full rounded-lg mb-2" />
+            <span id="contador-Mega Vicio'S" class="contador-badge hidden">0</span>
+          </div>
+          <h3>Mega Vicio</h3>
+          <p class="text-sm text-gray-400">
+            Doble carne, doble cheddar, huevo, panceta, cebolla caramelizada, mayonesa
+          </p>
+          <p>$6800</p>
+          <div class="flex gap-2 mt-2">
+            <button onclick="agregarAlCarrito('Mega Vicio\'S', 6800)" class="bg-green-500 px-4 py-1 rounded">Agregar</button>
+            <button onclick="quitarDelCarrito('Mega Vicio\'S')" class="bg-red-500 px-4 py-1 rounded">Quitar</button>
+          </div>
+        </div>
+
+        <!-- De Campo -->
+        <div class="min-w-[70%] snap-start bg-gray-800 rounded-lg p-4 relative">
+          <div class="relative">
+            <img src="imgs/DeCampo.jpeg" class="w-full rounded-lg mb-2" />
+            <span id="contador-De Campo" class="contador-badge hidden">0</span>
+          </div>
+          <h3>De Campo</h3>
+          <p class="text-sm text-gray-400">
+            4 carnes, 4 cheddar, panceta, salsa de la casa
+          </p>
+          <p>$4500</p>
+          <div class="flex gap-2 mt-2">
+            <button onclick="agregarAlCarrito('De Campo', 4500)" class="bg-green-500 px-4 py-1 rounded">Agregar</button>
+            <button onclick="quitarDelCarrito('De Campo')" class="bg-red-500 px-4 py-1 rounded">Quitar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sanguches -->
+      <h2 class="text-2xl text-[#fc3034]">🥪 Sandwiches</h2>
+      <div class="flex gap-4 overflow-x-auto snap-x">
+        <div class="min-w-[70%] snap-start bg-gray-800 rounded-lg p-4 relative">
+          <div class="relative">
+            <img src="imgs/Sanguchilo.jpeg" class="w-full rounded-lg mb-2" />
+            <span id="contador-Sandwiche de milanesa" class="contador-badge hidden">0</span>
+          </div>
+          <h3>Sandwiche de milanesa</h3>
+          <p class="text-sm text-gray-400">
+            Pan de papa, Milanesa de carne, queso, lechuga, tomate, mayonesa.
+   
+          </p>
+          <p>$7500</p>
+          <div class="flex gap-2 mt-2">
+            <button onclick="agregarAlCarrito('Sandwiche de milanesa', 2800)" class="bg-green-500 px-4 py-1 rounded">Agregar</button>
+            <button onclick="quitarDelCarrito('Sandwiche de milanesa')" class="bg-red-500 px-4 py-1 rounded">Quitar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fritas -->
+      <h2 class="text-2xl text-[#fc3034]">🍟 Fritas</h2>
+      <div class="flex gap-4 overflow-x-auto snap-x">
+        <div class="min-w-[70%] snap-start bg-gray-800 rounded-lg p-4 relative">
+          <div class="relative">
+            <img src="imgs/PapasConCheddar.jpeg" class="w-full rounded-lg mb-2" />
+            <span id="contador-Papas Cheddar" class="contador-badge hidden">0</span>
+          </div>
+          <h3>Papas Cheddar</h3>
+          <p>$3000</p>
+          <div class="flex gap-2 mt-2">
+            <button onclick="agregarAlCarrito('Papas Cheddar', 3000)" class="bg-green-500 px-4 py-1 rounded">Agregar</button>
+            <button onclick="quitarDelCarrito('Papas Cheddar')" class="bg-red-500 px-4 py-1 rounded">Quitar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nav inferior -->
+    <nav class="fixed bottom-0 left-0 w-full bg-gray-900 flex justify-around py-3 text-lg text-white">
+  <!-- Home -->
+  <button onclick="location.href='index.html'" aria-label="Inicio">
+    <i class="bi bi-house"></i>
+  </button>
+
+  <!-- Menú -->
+  <button onclick="location.href='menu.html'" class="text-yellow-400" aria-label="Menú">
+    <i class="bi bi-list"></i>
+  </button>
+
+  <!-- Carrito -->
+  <button onclick="location.href='carrito.html'" aria-label="Carrito">
+    <i class="bi bi-cart"></i>
+  </button>
+</nav>
+
+    <script src="carrito.js"></script>
+    
+  </body>
+</html>

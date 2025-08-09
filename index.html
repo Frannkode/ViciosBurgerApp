@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/imgs/ico.jpeg">
+
+
+  <title>Vicio's Burger</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fuente local -->
+  <style>
+    @font-face {
+      font-family: 'Lilita One';
+      src: url('fonts/LilitaOne-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    .font-chunky {
+      font-family: 'Lilita One', sans-serif;
+    }
+  </style>
+
+  <!-- Manifest para PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2196f3">
+</head>
+<body class="relative h-screen w-screen overflow-hidden text-center font-sans">
+
+  <!-- Fondo difuso -->
+  <div class="absolute inset-0 bg-cover bg-center blur-sm" 
+        style="background-image: url('imgs/background.jpg');">
+  </div>
+
+  <!-- Capa oscura encima del fondo -->
+  <div class="absolute inset-0 bg-black/60"></div>
+
+  <!-- Contenido encima -->
+  <div id="solo-movil" class="relative z-10 p-6 text-white">
+    <h1 class="text-6xl font-bold font-chunky">Vicio's</h1>
+    <h1 class="text-7xl font-bold mb-4 font-chunky">Burger</h1>
+    <div class="bg-black/70 rounded-xl shadow-lg overflow-hidden max-w-xs mx-auto mb-6">
+      <!-- Imagen -->
+        <img src="/imgs/MegaVicios.jpeg" alt="Promo" class="w-full h-40 object-cover">
+
+      <!-- Texto -->
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-red-600 font-chunky">PROMO!</h2>
+        <p class="text-3xl font-bold" style="color: #28a745; font-family: 'Lilita One', sans-serif;">
+          $6800
+        </p>
+        <p class="text-white-800 text-sm font-chunky">Aprovecha esta oferta especial solo por hoy.</p>
+      </div>
+  </div>
+    <button onclick="location.href='menu.html'" 
+    class="font-chunky px-5 py-2 rounded-lg shadow-lg text-xl text-white font-bold transition transform hover:scale-105"
+    style="background-color: #FFA600;">
+    Menú
+</button>
+  </div>
+
+  <!-- Vista PC -->
+  <div id="solo-pc" class="hidden md:block p-6 relative z-10 text-white">
+    <h2 class="text-xl">⚠ Solo disponible en móviles</h2>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

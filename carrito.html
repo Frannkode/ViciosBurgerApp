@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrito - Vicio's Burger</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.0/font/bootstrap-icons.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .font-chunky { font-family: 'Lilita One', sans-serif; }
+  </style>
+</head>
+<body class="bg-black text-white font-chunky">
+
+  <header class="text-center py-4 text-3xl bg-yellow-500">Carrito</header>
+
+  <div id="listaCarrito" class="p-4 space-y-4"></div>
+
+  <div class="p-4">
+    <p id="total" class="text-2xl">Total: $0</p>
+    <button onclick="comprarPorWhatsapp()" class="bg-green-500 w-full py-3 rounded-lg text-xl mt-4">Comprar por WhatsApp</button>
+  </div>
+
+  <nav class="fixed bottom-0 left-0 w-full bg-gray-900 flex justify-around py-3 text-lg text-white">
+  <!-- Home -->
+  <button onclick="location.href='index.html'" aria-label="Inicio">
+    <i class="bi bi-house"></i>
+  </button>
+
+  <!-- Menú -->
+  <button onclick="location.href='menu.html'" class="text-yellow-400" aria-label="Menú">
+    <i class="bi bi-list"></i>
+  </button>
+
+  <!-- Carrito -->
+  <button onclick="location.href='carrito.html'" aria-label="Carrito">
+    <i class="bi bi-cart"></i>
+  </button>
+</nav>
+
+  <script src="carrito.js"></script>
+</body>
+</html>
